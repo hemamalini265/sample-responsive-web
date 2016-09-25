@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <title>C-Store</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-theme.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/custom_style.css">
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+    <script src="js/plugin/bootstrap.js"></script>
+</head>
+<body>
+<div id="main">
+    <div id="content">
+        <div class="row">
+			<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3" id="loginForm">
+				<form>
+					<div class="panel-heading text-center">
+						<img class="logo" src="images/logo.png" alt="C-Store"></a>
+						<strong>Start managing your event in minutes</strong>
+					</div>
+					<div class="panel-body">
+						<div class="form-group">
+							<label class="control-label" for="email">Email:</label>
+							<input type="email" id="email" name="email" value="" class="form-control input-lg" required/>
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="password">Password:</label>
+							<input type="password" name="password" id="password" class="form-control input-lg" minlength="1" maxlength="14" required />
+						</div>
+					</div>
+					<div class="container-fluid">
+						<button type="submit" class="btn btn-primary btn-cta btn-lg pull-right">
+							Login <span class="fa fa-chevron-right"></span>
+						</button>
+						<label class="checkbox-inline" data-toggle="tooltip" data-placement="top" title="Not recommended if you are using a public computer!">
+							<input type="checkbox" name="persistent" value="1"/>
+							Remember me on this device
+						</label>
+					</div>
+					<hr style="margin-top: 45px;">
+					<div class="text-center">
+						<a href="index.html" class="btn btn-link">
+							Create an account
+						</a>
+						<a href="#" class="btn btn-link" id="showForgetPassword">
+							I forgot my password
+						</a>
+					</div>
+				</form>
+			</div>
+			<div  class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3" id="forgetPasswordForm" style="display:none">
+				<form>
+					<div class="panel-heading text-center">
+						<img class="logo" src="images/logo.png" alt="C-Store"></a>
+						<strong>Start managing your event in minutes</strong>
+					</div>            
+					<div class="panel-body">
+						<div class="form-group">
+							<label class="control-label text-center" for="email">Enter your email address</label>
+							<input type="email" id="email" name="email" class="form-control input-lg" required>
+						</div>
+					</div>
+					<div class="container-fluid clearfix">
+						<div class="row">
+							<div class="pull-left">
+								<button type="button" class="btn btn-default btn-lg" id="showLogin">
+									<span class="fa fa-chevron-left"></span> Back
+								</button>
+							</div>
+							<div class="text-right">
+								<button type="submit" class="btn btn-cta btn-lg">
+									Send request<span class="fa fa-chevron-right"></span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

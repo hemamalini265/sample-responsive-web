@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <title>C-Store</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-theme.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/custom_style.css">
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+    <script src="js/plugin/bootstrap.js"></script>
+</head>
+<body>
+<div class="heroSection">
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-default navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigationBar" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><img class="logo" src="images/logo.png"></a>
+				</div>
+				<div class="collapse navbar-collapse" id="navigationBar">
+					<ul class="nav navbar-nav">
+						<li><a href="#">Features</a></li>
+						<li><a href="#">Pricing</a></li>
+						<li><a href="#">Blog</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Support</a></li>
+						<li><a href="login.html" class="important">Log In</a></li>
+						<li><a href="#" id="createAccount" class="btn btn-sm btn-bordered">Create account</a></li>
+					</ul>
+				</div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="jumbotron">
+			<div class="row">
+				<div id="mainDiv" class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+					<h1 class="text-center">Build experiences</h1>
+					<div class="heroDetails text-center">C-Store is a cloud tool that allows event organizers<br />
+						to manage events, registration data,<br />
+						customer relationship and cashflow.<br /><br />
+
+						C-Store runs embedded on your website and<br />
+						implementation is as easy as copy and paste.<br />
+						Click below and start your event:<br />
+					</div>
+					<div class="collapse" id="processRequest">
+						<div class="well"></div>
+					</div>
+					<div class="text-center">
+							<div class="form-group">
+								<a href="#" class="btn heroBtn" id="openAccount">Start your free account now</a>
+							</div>
+					</div>
+				</div>
+				<div id="openAccountDiv" style="display:none" class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+					<form>
+						<div class="text-center">
+							<h4 class="text-muted" >Start managing your event in minutes</h4>
+							<div class="h1"></div>
+						</div>
+						<div class="panel-body">
+							<div class="form-group">
+								<label for="email" class="control-label text-center">
+									What is your email address?                    </label>
+								<input type="text" id="email" name="email" value="" class="form-control input-lg" placeholder="Email address">
+							</div>
+							<div class="form-group">
+								<label for="password" class="control-label text-center">
+									Please choose a password                    </label>
+								<div class="password-field password-field-lg"><span title="Show password" class="password-toggle">Show</span><span title="Hide password" class="password-toggle" style="display: none;">Hide</span><input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" autocomplete="off"></div>
+							</div>
+						</div>
+						<div class="container-fluid clearfix">
+							<div class="row">
+								<div class="pull-left">
+									<button type="button" class="btn btn-default btn-lg" id="goToMain">
+										<span class="fa fa-chevron-left"></span> Back
+									</button>
+								</div>
+								<div class="text-right">
+									<button type="button" class="btn btn-cta btn-lg">
+										Create account <span class="fa fa-chevron-right"></span>
+									</button>
+									<div class="h1"></div>
+									<h6>
+										By clicking the button above you agree to our <a href="#">Terms of Service</a>.
+									</h6>
+								</div>
+							</div>
+						</div>
+						<hr style="margin-top: 25px;">
+						<div class="text-center">
+							<a href="login.html" class="btn btn-link btn-sm">
+								I already have an account
+							</a>
+						</div>
+					</form>
+				</div>
+			</div>
+        </div>
+    </div>
+</div>
+
+<div class="cstoreContent" id="cstoreContentArea">
+    <a name="cstoreContent"></a>
+    <div class="container">
+        <div class="text-center">
+			<div class="h1"></div>
+            <h2>Sell tickets. Manage events and venues.</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel text-center">
+                    <div class="panel-heading">
+                        <div class="topIllustration">
+                            <img src="images/illustration-all-tools.png" alt="All the right event tools" class="img-responsive vcenter">
+                        </div>
+                        <div>Get access to all
+                            the right tools</div>
+                    </div>
+                    <div class="panel-body">
+                        With C-Store you get all the right
+                        tools with just one app.
+                        Everything is connected in
+                        perfect harmony.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel text-center">
+                    <div class="panel-heading">
+                        <div class="topIllustration">
+                            <img src="images/illustration-embed-tickets.png" alt="Embed ticket sales on your own website" class="img-responsive vcenter">
+                        </div>
+                        <div>Sell tickets directly on
+                            your website.</div>
+
+                    </div>
+                    <div class="panel-body">
+                        Copy and paste an embed code
+                        and you have everything
+                        running on your website.
+                        No stress, no cost.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel text-center">
+                    <div class="panel-heading">
+                        <div class="topIllustration">
+                            <img src="images/illustration-direct-payments.png" alt="Payments go straight to your account" class="img-responsive vcenter">
+                        </div>
+                        <div>Receive payments
+                            instantly</div>
+
+                    </div>
+                    <div class="panel-body">
+                        Payments go straight to
+                        your account. No wait time.
+                        Taxes are automatically
+                        computed and added.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contentPaddedTop text-center">
+            <a href="#" class="btn btn-primary btn-lg">Start your free account</a>
+        </div>
+		<div class="h1"></div>
+    </div>
+</div>
+
+<div class="row pricingArea" id="pricing">
+    <div class="container">
+        <div class="text-center megaMarginTop">
+            <h2>Simple Pricing</h2>
+            <div class="well">Choose one of the pricing plans
+                and go. The more you sell, the smaller the cost:</div>
+        </div>
+    </div>
+    <div class="container midContainer">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel pricingPanelSoft">
+                    <div class="panel-heading text-center">
+                        <h3>3%</h3>
+                        <small>of ticket cost</small>
+                    </div>
+                    <div class="panel-body">
+                        <div class="contentPaddedTop3x text-center">
+                            <p>Up to 1000 free event
+                                attendees</p>
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><br />
+                            <p>Standard plan <br />
+                                Basic features <br />
+                                One team member</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel pricingPanelStrong">
+                    <div class="panel-heading text-center">
+                        <h3>6%</h3>
+                        <small>of ticket cost</small>
+                    </div>
+                    <div class="panel-body">
+                        <div class="contentPaddedTop text-center">
+                            <p>Up to 1000 free event
+                                attendees</p>
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><br />
+                            <p>Professional plan <br />
+                                Basic features </p>
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><br />
+                            <p>Seating app<br />
+                                Badge design app <br />
+                                Custom forms <br />
+                                Vouchers and discounts <br />
+                                Customized purchase experience <br />
+                                Perpetual events <br />
+                                Multiple team members <br />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel pricingPanelSoft">
+                    <div class="panel-heading text-center">
+                        <h3>1$ / ticket</h3>
+                    <span class="label label-offer">Offer limited to 2016 <br />registrations only</span>
+                    </div>
+                    <div class="panel-body">
+                        <div class="contentPaddedTop text-center">
+                            <p>Up to 1000 free event attendees</p>
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><br />
+                            <p>Professional plan <br />Basic features </p>
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><br />
+                            <p>Seating app<br />
+                                Badge design app <br />
+                                Custom forms <br />
+                                Vouchers and discounts <br />
+                                Customized purchase experience <br />
+                                Perpetual events <br />
+                                Multiple team members <br />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="contentPaddedTop text-center">
+                <a href="#" class="btn btn-primary btn-lg">Get started now <br />
+                <small>No credit card required</small>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row featuresArea">
+    <div class="container contentPaddedTop3x">
+        <div class="row text-center">
+            <h2>All the features you need in one place</h2>
+        </div>
+        <div class="row contentPaddedTop3x">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="panel text-center">
+                    <div class="panel-heading">
+                        <div><img src="images/eticket.png" alt="Electronic tickets app"></div>
+                        <h3>Start selling etickets now</h3>
+                    </div>
+                    <div class="panel-body">
+                        Set up your account
+                        and start selling
+                        eTickets in minutes
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="panel text-center">
+                    <div class="panel-heading">
+                        <div><img src="images/direct-payments.png" alt="Direct payments for events"></div>
+                        <h3>Instant payments</h3>
+                    </div>
+                    <div class="panel-body">
+                        Payments go straight
+                        to your account.
+                        Set up payment options in seconds.
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="panel text-center">
+                    <div class="panel-heading">
+                        <div><img src="images/responsive.png" alt="Responsive event registration"></div>
+                        <h3>Cross device</h3>
+                    </div>
+                    <div class="panel-body">
+                        C-Store's responsive technology works great
+                        across devices.
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="panel text-center">
+                    <div class="panel-heading">
+                        <div><img src="images/seating.png" alt="Seating chart designer"></div>
+                        <h3>Seating designer</h3>
+                    </div>
+                    <div class="panel-body">
+                        Easily design your
+                        seating space
+                        in a visual environment
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="panel text-center">
+                    <div class="panel-heading">
+                        <div><img src="images/forms.png" alt="Event registration forms"></div>
+                        <h3>Registration forms</h3>
+                    </div>
+                    <div class="panel-body">
+                        Collect data from
+                        your attendees
+                        using our custom forms app.
+                    </div>
+                </div>
+            </div>
+           
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="panel text-center">
+                    <div class="panel-heading">
+                        <div><img src="images/reports.png" alt="Financial and sales reporting"></div>
+                        <h3>Financial and sales reporting</h3>
+                    </div>
+                    <div class="panel-body">
+                        Stay in control
+                        with real time
+                        financial and sales reports
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="panel text-center">
+                    <div class="panel-heading">
+                        <div><img src="images/invoices.png" alt="Sales invoices are automatically issued"></div>
+                        <h3>Invoice generation and mailing</h3>
+                    </div>
+                    <div class="panel-body">
+                        Invoices are automatically
+                        generated and mailed on
+                        your behalf
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="panel text-center">
+                    <div class="panel-heading">
+                        <div><img src="images/ticketscanning-apps.png" alt="Scan tickets using our free apps"></div>
+                        <h3>Free ticket scanning apps</h3>
+                    </div>
+                    <div class="panel-body">
+                        Free apps to scan
+                        electronic tickets
+                        at the event
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="panel text-center">
+                    <div class="panel-heading">
+                        <div><img src="images/vouchers.png" alt="Event vouchers"></div>
+                        <h3>Vouchers and discounts</h3>
+                    </div>
+                    <div class="panel-body">
+                        Promotional pricing
+                        for your selected
+                        customers
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="panel text-center">
+                    <div class="panel-heading">
+                        <div><img src="images/embedded-events.png" alt="Event registration is embedded on your website"></div>
+                        <h3>Event registration on your website</h3>
+                    </div>
+                    <div class="panel-body">
+                        Create, copy and paste.
+                        run everything on your
+                        own website
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="panel text-center">
+                    <div class="panel-heading">
+                        <div><img src="images/search.png" alt="Search for relevant data"></div>
+                        <h3>Search</h3>
+                    </div>
+                    <div class="panel-body">
+                        Search for relevant data. Customers, attendees, events and more.
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="panel text-center">
+                    <div class="panel-heading">
+                        <div><img src="images/crm.png" alt="Event customer relationship management"></div>
+                        <h3>CRM</h3>
+                    </div>
+                    <div class="panel-body">
+                        Keep track of your
+                        attendees, their preferences
+                        and purchases.
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="row">
+                <p class="navbar-text navbar-right contentPaddedTop2x">
+                    <a href="#" title="Follow C-Store on Twitter"><span class="fa fa-twitter-square largeLink" aria-hidden="true"></span></a>
+                    <a href="#" class="navbar-link" title="Event and access management features">Features</a>
+                    <a href="#" class="navbar-link" title="App pricing">Pricing</a>
+                    <a href="#" class="navbar-link" title="Some stuff we think you may never read but hey, if you do, it's all about us.">About us</a>
+                    <a href="#" class="navbar-link" title="We are really, really happy to receive your mails and messages">Contact</a>
+                    <a href="#" class="navbar-link" title="We are here if you need us">Support</a>
+                </p>
+            </div>
+            <div class="row">
+                <p class="navbar-text navbar-right contentPaddedTop2x">
+                    <a href="#" class="navbar-link" target="_blank">Terms of service</a>
+                </p>
+            </div>
+        </nav>
+    </div>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>
